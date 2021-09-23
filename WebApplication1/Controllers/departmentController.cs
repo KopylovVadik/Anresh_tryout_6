@@ -50,7 +50,7 @@ namespace WebApplication1.Controllers
             using (var connection = new SqlConnection(CONNECTION_STRING))
                 
             {
-                var result_department = connection.Execute("UPDATE Department SET name = @name WHERE id =@id",data);
+                var result_department = connection.Execute("UPDATE Department SET "+data.key+"= @value WHERE id =@id",data);
 
                     return Ok(result_department);
             }
@@ -109,7 +109,8 @@ namespace WebApplication1.Controllers
     public class UpdateDepartmentDataModel
     {
         public int id { get; set; }
-        public string name { get; set; }
+        public string key { get; set; }
+        public string value { get; set; }
     }
 
 

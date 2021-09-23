@@ -11,20 +11,37 @@
             display: flex;
             flex-direction: column;
         }
+
+       
+        
+       
     </style>
 </head>
 <body>
 
 
 
-    <h2>Аналитические решения</h2>
+<h2>Аналитические решения</h2>
 
-    <table id="emploes">
+<input type="text" id="employee_input" placeholder="empolyee name:">
+<input type="text" id="salary_input" placeholder="salary:">
+
+<select id="select_department">
+    <option>
+
+    </option>
+</select>
+
+<button onclick="addEmployee()">Добавить сотрудника</button>
+
+<table id="emploes">
         <thead>
             <tr>
                 <th> fio </th>
                 <th> department </th>
-                <th>Actions</th>
+                <th>salary</th>
+                <th>actions</th>
+                
 
             </tr>
         </thead>
@@ -33,9 +50,9 @@
 
     </table>
 
-<script src="js/JavaScript.js">
+    <script src="js/JavaScript.js">
 
-</script>
+    </script>
 
 </body>
 </html>
